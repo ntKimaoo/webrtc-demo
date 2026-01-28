@@ -12,42 +12,52 @@ let onParticipantLeft = null;
 const config = {
   iceServers: [
     {
-      urls: "stun:stun.relay.metered.ca:80",
+      urls: "stun:stun.l.google.com:19302",
     },
     {
-      urls: "turn:global.relay.metered.ca:80",
-      username: "c8af2a6d067a2d2bd56f1a64",
-      credential: "EqNHfvLSLD6Udxsj",
+      urls: "stun:stun1.l.google.com:19302",
     },
     {
-      urls: "turn:global.relay.metered.ca:80?transport=tcp",
-      username: "c8af2a6d067a2d2bd56f1a64",
-      credential: "EqNHfvLSLD6Udxsj",
+      urls: "stun:stun2.l.google.com:19302",
     },
     {
-      urls: "turn:global.relay.metered.ca:443",
-      username: "c8af2a6d067a2d2bd56f1a64",
-      credential: "EqNHfvLSLD6Udxsj",
+      urls: "stun:stun3.l.google.com:19302",
     },
     {
-      urls: "turns:global.relay.metered.ca:443?transport=tcp",
-      username: "c8af2a6d067a2d2bd56f1a64",
-      credential: "EqNHfvLSLD6Udxsj",
+      urls: "stun:stun4.l.google.com:19302",
     },
+    // {
+    //   urls: "stun:stun.relay.metered.ca:80",
+    // },
+    // {
+    //   urls: "turn:global.relay.metered.ca:80",
+    //   username: "c8af2a6d067a2d2bd56f1a64",
+    //   credential: "EqNHfvLSLD6Udxsj",
+    // },
+    // {
+    //   urls: "turn:global.relay.metered.ca:80?transport=tcp",
+    //   username: "c8af2a6d067a2d2bd56f1a64",
+    //   credential: "EqNHfvLSLD6Udxsj",
+    // },
+    // {
+    //   urls: "turn:global.relay.metered.ca:443",
+    //   username: "c8af2a6d067a2d2bd56f1a64",
+    //   credential: "EqNHfvLSLD6Udxsj",
+    // },
+    // {
+    //   urls: "turns:global.relay.metered.ca:443?transport=tcp",
+    //   username: "c8af2a6d067a2d2bd56f1a64",
+    //   credential: "EqNHfvLSLD6Udxsj",
+    // },
   ],
   iceCandidatePoolSize: 10,
 };
 
-// Get the SignalR hub URL - uses environment variable or auto-detects based on window location
 function getSignalRUrl() {
-  // If running in production/ngrok, use the backend ngrok URL
-  // You can set this in your .env file as VITE_SIGNALR_URL
   if (import.meta.env.VITE_SIGNALR_URL) {
     return import.meta.env.VITE_SIGNALR_URL;
   }
-
-  // Default to localhost for development
-  return "https://f7f34e7f993d.ngrok-free.app/webrtc";
+  return "https://c2dbda157047.ngrok-free.app/webrtc";
 }
 
 // Khởi tạo SignalR connection
