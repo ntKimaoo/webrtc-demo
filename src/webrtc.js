@@ -12,19 +12,9 @@ let onParticipantLeft = null;
 const config = {
   iceServers: [
     {
-      urls: "stun:stun.l.google.com:19302",
-    },
-    {
-      urls: "stun:stun1.l.google.com:19302",
-    },
-    {
-      urls: "stun:stun2.l.google.com:19302",
-    },
-    {
-      urls: "stun:stun3.l.google.com:19302",
-    },
-    {
-      urls: "stun:stun4.l.google.com:19302",
+     urls: 'turn:103.149.252.47:3478',
+    username: 'testuser',
+    credential: 'testpassword'
     },
     // {
     //   urls: "stun:stun.relay.metered.ca:80",
@@ -57,7 +47,7 @@ function getSignalRUrl() {
   if (import.meta.env.VITE_SIGNALR_URL) {
     return import.meta.env.VITE_SIGNALR_URL;
   }
-  return "https://61d8a4e5cef4.ngrok-free.app/webrtc";
+  return "https://3a64d7bd9ea0.ngrok-free.app/webrtc";
 }
 
 // Khởi tạo SignalR connection
