@@ -57,7 +57,7 @@ function getSignalRUrl() {
   if (import.meta.env.VITE_SIGNALR_URL) {
     return import.meta.env.VITE_SIGNALR_URL;
   }
-  return "https://c2dbda157047.ngrok-free.app/webrtc";
+  return "https://61d8a4e5cef4.ngrok-free.app/webrtc";
 }
 
 // Khởi tạo SignalR connection

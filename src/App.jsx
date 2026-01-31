@@ -570,26 +570,6 @@ function App() {
                 </p>
               </div>
 
-              <div className="form-group">
-                <label className="form-label">Loại cuộc gọi</label>
-                <div className="call-type-grid">
-                  <button
-                    onClick={() => setCallType("1v1")}
-                    className={`call-type-btn ${callType === "1v1" ? "active" : ""}`}
-                  >
-                    <User size={20} />
-                    <span>1-1</span>
-                  </button>
-                  <button
-                    onClick={() => setCallType("group")}
-                    className={`call-type-btn ${callType === "group" ? "active" : ""}`}
-                  >
-                    <Users size={20} />
-                    <span>Nhóm</span>
-                  </button>
-                </div>
-              </div>
-
               <button onClick={startCall} className="start-btn">
                 <Phone size={20} />
                 Bắt đầu cuộc gọi
