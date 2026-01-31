@@ -12,7 +12,7 @@ let onParticipantLeft = null;
 const config = {
   iceServers: [
     {
-     urls: 'turn:103.149.252.47:3478',
+     urls: 'turn:103.149.113.47:3478',
     username: 'testuser',
     credential: 'testpassword'
     },
